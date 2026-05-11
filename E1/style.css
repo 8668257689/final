@@ -1,0 +1,70 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f4f7fc;
+}
+
+/* Sidebar */
+.sidebar{
+  width:220px;
+  height:100vh;
+  background:linear-gradient(to bottom,#4e54c8,#8f94fb);
+  color:white;
+}
+
+.sidebar h3{
+  text-align:center;
+  margin-top:10px;
+}
+
+.nav-link{
+  color:white !important;
+  padding:10px;
+  margin-top:10px;
+}
+
+.nav-link:hover{
+  background:white;
+  color:black !important;
+  border-radius:5px;
+}
+
+/* Heading */
+h2{
+  color:#4e54c8;
+  font-weight:bold;
+}
+
+/* Cards */
+.card{
+  border:none;
+  border-radius:15px;
+  color:white;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+/* Different Card Colors */
+.col-md-4:nth-child(1) .card{
+  background:linear-gradient(to right,#ff9966,#ff5e62);
+}
+
+.col-md-4:nth-child(2) .card{
+  background:linear-gradient(to right,#36d1dc,#5b86e5);
+}
+
+.col-md-4:nth-child(3) .card{
+  background:linear-gradient(to right,#56ab2f,#a8e063);
+}
+
+.card-body{
+  padding:30px;
+}
+
+.card h2{
+  color:white;
+  font-size:40px;
+}
