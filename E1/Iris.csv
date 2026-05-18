@@ -1,0 +1,51 @@
+# Import libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Read dataset
+df = pd.read_csv("Iris.csv")
+
+# Show first 5 rows
+print(df.head())
+
+# Scatter Plot
+sns.scatterplot(x="SepalLengthCm",
+                y="PetalLengthCm",
+                hue="Species",
+                data=df)
+
+plt.title("Scatter Plot")
+plt.show()
+
+# Histogram
+plt.hist(df["SepalLengthCm"], bins=10)
+
+plt.title("Histogram")
+plt.xlabel("Sepal Length")
+plt.ylabel("Frequency")
+plt.show()
+
+# Bar Plot
+sns.barplot(x="Species",
+            y="SepalLengthCm",
+            data=df)
+
+plt.title("Bar Plot")
+plt.show()
+
+# Box Plot
+sns.boxplot(x="Species",
+            y="PetalLengthCm",
+            data=df)
+
+plt.title("Box Plot")
+plt.show()
+
+# Heatmap
+corr = df.select_dtypes(include='number').corr()
+
+sns.heatmap(corr, annot=True)
+
+plt.title("Heatmap")
+plt.show()
